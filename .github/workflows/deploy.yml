@@ -10,12 +10,12 @@ jobs:
   test:
     env: 
       MONGODB_CLUSTER_ADDRESS: Cluster0.ydku2d7.mongodb.net
-      MONGODB_USERNAME: vidyadhar20_db_user
-      MONGODB_PASSWORD: 7LPk4PIzE6KIlx2A
+      MONGODB_USERNAME:  ${{secrets.MONGODB_USERNAME}}
+      MONGODB_PASSWORD: ${{secrets.MONGODB_PASSWORD}}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
-    steps:
+    steps:gi
       - name: Get Code
         uses: actions/checkout@v3
       - name: Cache dependencies
